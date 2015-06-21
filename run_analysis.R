@@ -1,7 +1,7 @@
 
-setwd("UCI HAR Dataset")
+setwd("UCI HAR Dataset/test")
 
-setwd("test")
+
 
 Xtest <- read.table("X_test.txt")
 Ytest <- read.table("Y_test.txt")
@@ -30,4 +30,4 @@ datasub1$Activity[datasub1$Activity == 4] <- "Sitting"
 datasub1$Activity[datasub1$Activity == 6] <- "Laying"
 datasub3 <- aggregate(datasub1[, 3:68], list(Subject = datasub1$Subject, Activity = datasub1$Activity), mean)
 
-write.table(datasub3, "tidydata2.txt", sep="\t", row.names=TRUE, col.names=TRUE)
+write.table(datasub3, "tidydata.txt", sep="\t", row.names=FALSE, col.names=TRUE)
