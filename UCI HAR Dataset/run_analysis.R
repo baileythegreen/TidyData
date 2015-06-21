@@ -1,5 +1,5 @@
 
-setwd("/UCI HAR Dataset")
+setwd("UCI HAR Dataset")
 
 setwd("test")
 
