@@ -6,7 +6,7 @@ setwd("test")
 Xtest <- read.table("X_test.txt")
 Ytest <- read.table("Y_test.txt")
 subjecttest <- read.table("subject_test.txt")
-setwd("/UCI HAR Dataset")
+setwd("..")
 setwd("train")
 Xtrain <- read.table("X_train.txt")
 Ytrain <- read.table("Y_train.txt")
@@ -18,7 +18,7 @@ traindata <- cbind(subjecttrain, Ytrain, Xtrain)
 totaldata <- rbind(testdata, traindata)
 
 datasub1 <- totaldata[, c(1:8, 43:48, 83:88, 123:128, 163:168, 203:204, 216:217, 229:230, 242:243, 255:256, 268:273, 347:352, 426:431, 505:506, 518:519, 531:532, 544:545)]
-setwd("/UCI HAR Dataset")
+setwd("..")
 variables <- read.table("Variable Names.txt")
 colnames(datasub1) <- variables[, 1]
 
